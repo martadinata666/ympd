@@ -1,9 +1,12 @@
+# THIS IS A FORK (REUPLOAD) for Personal Docker Container at 
+https://hub.docker.com/r/martadinata666/ympd
+```
+# ORIGINAL DEVELOPER
 [![Build Status](https://travis-ci.org/notandy/ympd.svg)](https://travis-ci.org/notandy/ympd)
 ympd
 ====
 
 Standalone MPD Web GUI written in C, utilizing Websockets and Bootstrap/JS
-
 
 http://www.ympd.org
 
@@ -26,7 +29,7 @@ Unix Build Instructions
 
 Run flags
 ---------
-```
+
 Usage: ./ympd [OPTION]...
 
  -h, --host <host>             connect to mpd at host [localhost]
@@ -36,23 +39,24 @@ Usage: ./ympd [OPTION]...
  -u, --user <username>         drop priviliges to user after socket bind
  -V, --version                 get version
  --help                        this help
-```
+
 
 SSL Support
 -----------
 To run ympd with SSL support:
 
 - create a certificate (key and cert in the same file), example:
-```
+
 # openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 1000 -nodes
 # cat key.pem cert.pem > ssl.pem
-```
+
 - tell ympd to use a webport using SSL and where to find the certificate: 
-```
+
 # ./ympd -w "ssl://8081:/path/to/ssl.pem"
-```
+
 
 Copyright
 ---------
 
 2013-2014 <andy@ndyk.de>
+```
