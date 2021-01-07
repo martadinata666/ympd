@@ -2,6 +2,13 @@
 https://hub.docker.com/r/martadinata666/ympd
 
 # ORIGINAL DEVELOPER
+
+##ympd
+is a standalone MPD Web GUI written in C, utilizing Websockets and Bootstrap/JS. https://github.com/notandy/ympd
+
+Using latest version ympd from : https://github.com/notandy/ympd
+
+
 [![Build Status](https://travis-ci.org/notandy/ympd.svg)](https://travis-ci.org/notandy/ympd)
 ympd
 ====
