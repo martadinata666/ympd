@@ -40,5 +40,5 @@ docker-hub-build:
     - echo "$CI_DOCKERHUB_REGISTRY_PASSWORD"
     - echo "$CI_DOCKERHUB_REGISTRY"
     - echo "$CI_DOCKERHUB_REGISTRY_IMAGE"
-    - docker build --pull -t "$CI_DOCKERHUB_REGISTRY_IMAGE" .
-    - docker push "$CI_DOCKERHUB_REGISTRY_IMAGE"
+    #- docker build --pull -t "$CI_DOCKERHUB_REGISTRY_IMAGE" .
+    #- docker push "$CI_DOCKERHUB_REGISTRY_IMAGE"
