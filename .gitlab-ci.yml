@@ -36,9 +36,5 @@ docker-hub-build:
   before_script:
     - docker login -u "$CI_DOCKERHUB_REGISTRY_USER" -p "$CI_DOCKERHUB_REGISTRY_PASSWORD" $CI_DOCKERHUB_REGISTRY
   script:
-    - echo "$DOCKERHUB_REGISTRY_USER"
-    - echo "$DOCKERHUB_REGISTRY_PASSWORD"
-    - echo "$DOCKERHUB_REGISTRY"
-    - echo "$DOCKERHUB_REGISTRY_IMAGE"
-    #- docker build --pull -t "$CI_DOCKERHUB_REGISTRY_IMAGE" .
-    #- docker push "$CI_DOCKERHUB_REGISTRY_IMAGE"
+    - docker build --pull -t "$CI_DOCKERHUB_REGISTRY_IMAGE" .
+    - docker push "$CI_DOCKERHUB_REGISTRY_IMAGE"
