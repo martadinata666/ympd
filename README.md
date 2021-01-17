@@ -43,6 +43,4 @@ services:
       MPD_PORT: mpd-port
     ports:
       - "8083:8080"
-    depends_on:
-      - ms
 ```
