@@ -12,7 +12,9 @@ docker-build-master:
   script:
     - docker build --pull -t "$CI_REGISTRY_IMAGE" .
     - docker push "$CI_REGISTRY_IMAGE"
-    - docker build --pull -t "$CI_DOCKERHUB_REGISTRY_IMAGE" .
+    #- docker build --pull -t "$CI_DOCKERHUB_REGISTRY_IMAGE" . 
+    #instead rebuild change tag
+    - docker tag "$CI_REGISTRY_IMAGE" "$CI_DOCKERHUB_REGISTRY_IMAGE"
     - docker push "$CI_DOCKERHUB_REGISTRY_IMAGE"
   only:
     - master
