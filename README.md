@@ -1,7 +1,7 @@
 # YMPD Web Based MPD Client
 
 ## Usage
-### Compose (Sample conjunction with MPD)
+### Compose (Sample conjunction with YMPD)
 ```
 ---
 version: '2.4'
