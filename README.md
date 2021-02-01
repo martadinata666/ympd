@@ -1,4 +1,10 @@
 # YMPD Web Based MPD Client
+* ### https://github.com/notandy/ympd
+* ### https://gitlab.com/dedyms/ympd
+![ympd Homepage](https://i.imgur.com/pV77Mdf.png)
+
+## Supported tags
+* [latest,git](https://gitlab.com/dedyms/ympd/-/blob/master/Dockerfile)
 
 ## Usage
 ### Compose (Sample conjunction with YMPD)

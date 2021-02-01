@@ -13,13 +13,11 @@ docker-build-master:
   script:
     - docker build --pull -t "$CI_REGISTRY_IMAGE" -t "$CI_REGISTRY_IMAGE:$RELEASE" -t "$CI_DOCKERHUB_REGISTRY_IMAGE" -t "$CI_DOCKERHUB_REGISTRY_IMAGE:$RELEASE" .
     - docker push "$CI_REGISTRY_IMAGE"
-    #- docker tag "$CI_REGISTRY_IMAGE" "$CI_REGISTRY_IMAGE:$RELEASE"
     - docker push "$CI_REGISTRY_IMAGE:$RELEASE"
-    #- docker build --pull -t "$CI_DOCKERHUB_REGISTRY_IMAGE" . 
-    #instead rebuild change tag
-    #- docker tag "$CI_REGISTRY_IMAGE:RELEASE" "$CI_DOCKERHUB_REGISTRY_IMAGE"
     - docker push "$CI_DOCKERHUB_REGISTRY_IMAGE"
-    #- docker tag ""
     - docker push "$CI_DOCKERHUB_REGISTRY_IMAGE:$RELEASE"
   only:
-    - master
+    refs:
+      - master
+    changes:
+      - Dockerfile
