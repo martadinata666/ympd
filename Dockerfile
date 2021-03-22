@@ -10,7 +10,7 @@ FROM alpine:3.12
 RUN apk add  --no-cache libmpdclient openssl
 COPY --from=0 /src/ympd /usr/bin/ympd
 COPY --from=0 /src/mkdata /usr/bin/mkdata
-ENV MPD_SERVER=localhost
+ENV MPD_SERVER=0.0.0.0
 ENV MPD_PORT=6600
 ENV WEBPORT=8080
 EXPOSE 8080/tcp
